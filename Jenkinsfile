@@ -11,7 +11,13 @@ pipeline {
           bat 'docker-compose up -d'
         }
       }
+      stage('run_redisapp') {
+        steps {
+          sh 'redisapp.py'
+        }
       }
+      }
+      
     post {
       always {
         bat "echo end"
