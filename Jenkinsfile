@@ -13,11 +13,11 @@ pipeline {
       }
       stage('run_redisapp') {
         steps {
-          sh 'redisapp.py'
+          bat 'redisapp.py'
         }
       }
       }
-      
+
     post {
       always {
         bat "echo end"
